@@ -26,7 +26,7 @@ export default function CreateAccount() {
                         <input
                             type="text"
                             placeholder="Insira seu nome"
-                            className="min-w-80 h-11 border-3 rounded-lg border-gray-300 px-3"
+                            className="min-w-80 h-11 ring-2 ring-gray-600 border-3 rounded-lg border-gray-300 px-3"
                         />
                     </div>
 
@@ -35,7 +35,7 @@ export default function CreateAccount() {
                         <input
                             type="text"
                             placeholder="Insira seu email"
-                            className="min-w-80 h-11 border-3 rounded-lg border-gray-300 px-3"
+                            className="min-w-80 h-11 border-3 ring-2 ring-gray-600 rounded-lg border-gray-300 px-3"
                         />
                     </div>
 
@@ -44,12 +44,12 @@ export default function CreateAccount() {
                         <input
                             type="password"
                             placeholder="Insira sua senha"
-                            className="min-w-80 h-11 border-3 rounded-lg border-gray-300 px-3"
+                            className="min-w-80 h-11 border-3 ring-2 ring-gray-600 rounded-lg border-gray-300 px-3"
                         />
                     </div>
 
                     <div className="mt-8 flex flex-col items-center">
-                        <Button textButton="Cadastrar" />
+                        <Button textButton="Cadastrar" action="cadastrar" />
                     </div>
                 </div>
             </div>

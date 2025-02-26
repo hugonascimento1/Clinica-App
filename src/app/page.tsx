@@ -2,8 +2,8 @@ import Button from "@/components/Button";
 import LogoClinic from "@/components/LogoClinic";
 import Link from "next/link";
 
-
 export default function Home() {
+
   return (
     <div>
 
@@ -16,7 +16,7 @@ export default function Home() {
             <input
               type="text"
               placeholder="Insira seu email"
-              className="min-w-80 h-11 border-3 rounded-lg border-gray-300 px-3"
+              className="min-w-80 h-11 border-3 rounded-lg ring-2 ring-gray-600 border-gray-300 px-3"
             />
           </div>
 
@@ -25,13 +25,13 @@ export default function Home() {
             <input
               type="password"
               placeholder="Insira sua senha"
-              className="min-w-80 h-11 border-3 rounded-lg border-gray-300 px-3"
+              className="min-w-80 h-11 border-3 ring-2 ring-gray-600 rounded-lg border-gray-300 px-3"
             />
-            <a href="/forgotPassword" className="underline mt-2 text-center">Esqueceu a senha?</a>
+            <a href="/forgotPassword" className="underline mt-2 text-center p-0 w-40">Esqueceu a senha?</a>
           </div>
 
           <div className="mt-8 flex flex-col items-center">
-            <Button textButton="Entrar" />
+            <Button textButton="Entrar" action="entrar" />
             <Link href="/createAccount" className="underline mt-4">Cadastre-se</Link>
           </div>
         </div>

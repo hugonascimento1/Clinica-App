@@ -26,12 +26,12 @@ export default function ForgotPassword() {
                         <input
                             type="text"
                             placeholder="Insira seu email"
-                            className="min-w-80 h-11 border-3 rounded-lg border-gray-300 px-3"
+                            className="min-w-80 h-11 ring-2 ring-gray-600 border-3 rounded-lg border-gray-300 px-3"
                         />
                     </div>
 
                     <div className="mt-8 flex flex-col items-center">
-                        <Button textButton="Enviar" />
+                        <Button textButton="Enviar" action="entrar" />
                     </div>
                 </div>
             </div>
