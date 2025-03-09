@@ -46,7 +46,7 @@ export default function Nav() {
                         </button>
 
                         <nav className="flex flex-col gap-4 text-lg font-medium">
-                            <Link href="/" className="hover:text-blue-500 flex flex-row gap-2"><HomeIcon/> Home</Link>
+                            <Link href="/home" className="hover:text-blue-500 flex flex-row gap-2"><HomeIcon/> Home</Link>
                             <Link href="/conteudo1" className="hover:text-blue-500 flex flex-row gap-2"><FilePenLineIcon /> Conteúdo 1</Link>
                             <Link href="/acompanhamento" className="hover:text-blue-500 flex flex-row gap-2"><BotIcon /> Acompanhamento</Link>
                             <Link href="/cirurgias" className="hover:text-blue-500 flex flex-row gap-2"><StethoscopeIcon /> Cirurgias</Link>
