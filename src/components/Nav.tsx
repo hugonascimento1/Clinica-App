@@ -3,9 +3,21 @@
 import { BotIcon, FilePenLineIcon, HomeIcon, LogOutIcon, MenuIcon, StethoscopeIcon, X } from "lucide-react";
 import Link from "next/link";
 import React, { useState } from "react";
+import { useRouter } from "next/navigation";
+import { supabase } from "@/lib/supabaseClient";
 
 export default function Nav() {
     const [isOpen, setIsOpen] = useState(false);
+    const router = useRouter();
+
+    const handleLogout = async () => {
+        const { error } = await supabase.auth.signOut();
+        if (error) {
+            alert('Erro ao sair: ' + error.message);
+        } else {
+            router.push('/');
+        }
+    }
 
     return (
         <div className="w-screen h-32 bg-foreground text-white py-5 flex items-center px-6">
@@ -38,7 +50,7 @@ export default function Nav() {
                             <Link href="/conteudo1" className="hover:text-blue-500 flex flex-row gap-2"><FilePenLineIcon /> Conteúdo 1</Link>
                             <Link href="/acompanhamento" className="hover:text-blue-500 flex flex-row gap-2"><BotIcon /> Acompanhamento</Link>
                             <Link href="/cirurgias" className="hover:text-blue-500 flex flex-row gap-2"><StethoscopeIcon /> Cirurgias</Link>
-                            <Link href="/" className="text-gray-300 hover:text-white flex flex-row gap-2 fixed bottom-10"><LogOutIcon /> Sair do app</Link>
+                            <button onClick={handleLogout} className="text-gray-300 hover:text-white flex flex-row gap-2 fixed bottom-10"><LogOutIcon /> Sair</button>
                         </nav>
                     </div>
 
