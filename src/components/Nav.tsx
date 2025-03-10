@@ -29,7 +29,7 @@ export default function Nav() {
                 <div className="flex-grow text-center text-4xl font-bold">
                     <div className="font-semibold text-2xl flex flex-col justify-center items-center">
                         <h1>Logo</h1>
-                        <h1>Clinica</h1>
+                        <h1>Clinicaaaaa</h1>
                     </div>
                 </div>
 
