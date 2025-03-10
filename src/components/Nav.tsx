@@ -20,16 +20,16 @@ export default function Nav() {
     }
 
     return (
-        <div className="w-screen h-32 bg-foreground text-white py-5 flex items-center px-6">
-            <div className="flex w-full items-center justify-between">
-                <button onClick={() => setIsOpen(true)}>
+        <div className="w-100 h-32 text-white py-5 d-flex align-items-center px-3"  style={{ backgroundColor: '#4844B6' }}>
+            <div className="d-flex w-100 align-items-center justify-content-between">
+                <button onClick={() => setIsOpen(true)} className="btn btn-link text-white p-0">
                     <MenuIcon />
                 </button>
 
-                <div className="flex-grow text-center text-4xl font-bold">
-                    <div className="font-semibold text-2xl flex flex-col justify-center items-center">
+                <div className="flex-grow-1 text-center fs-2 fw-bold">
+                    <div className="fw-semibold fs-3 d-flex flex-column justify-content-center align-items-center">
                         <h1>Logo</h1>
-                        <h1>Clinicaaaaa</h1>
+                        <h1>Clinica</h1>
                     </div>
                 </div>
 
@@ -38,19 +38,19 @@ export default function Nav() {
 
             {isOpen && (
                 <>
-                    <div className="fixed inset-0 bg-black bg-opacity-50 z-40" onClick={() => setIsOpen(false)}></div>
+                    <div className="position-fixed top-0 bottom-0 start-0 end-0 bg-black bg-opacity-50 z-40" onClick={() => setIsOpen(false)}></div>
 
-                    <div className="fixed top-0 left-0 h-full w-64 bg-foreground shadow-lg z-50 p-6 flex flex-col">
-                        <button onClick={() => setIsOpen(false)} className="self-end mb-4">
-                            <X className="w-6 h-6 text-white" />
+                    <div className=" position-fixed top-0 start-0 h-100 w-25 bg-foreground shadow-lg z-50 p-4 d-flex flex-column"  style={{ backgroundColor: '#4844B6' }}>
+                        <button onClick={() => setIsOpen(false)} className=" align-self-end mb-4 btn btn-link p-0 text-white">
+                            <X className="w-6 h-6" />
                         </button>
 
-                        <nav className="flex flex-col gap-4 text-lg font-medium">
-                            <Link href="/home" className="hover:text-blue-500 flex flex-row gap-2"><HomeIcon/> Home</Link>
-                            <Link href="/conteudo1" className="hover:text-blue-500 flex flex-row gap-2"><FilePenLineIcon /> Conteúdo 1</Link>
-                            <Link href="/acompanhamento" className="hover:text-blue-500 flex flex-row gap-2"><BotIcon /> Acompanhamento</Link>
-                            <Link href="/cirurgias" className="hover:text-blue-500 flex flex-row gap-2"><StethoscopeIcon /> Cirurgias</Link>
-                            <button onClick={handleLogout} className="text-gray-300 hover:text-white flex flex-row gap-2 fixed bottom-10"><LogOutIcon /> Sair</button>
+                        <nav className=" d-flex flex-column gap-4 fs-5 fw-medium">
+                            <Link href="/home" className="text-whit d-flex flex-row gap-2 text-decoration-none text-white"><HomeIcon/> Home</Link>
+                            <Link href="/conteudo1" className="text-whit d-flex flex-row gap-2 text-decoration-none text-white"><FilePenLineIcon /> Conteúdo 1</Link>
+                            <Link href="/acompanhamento" className="text-whit d-flex flex-row gap-2 text-decoration-none text-white"><BotIcon /> Acompanhamento</Link>
+                            <Link href="/cirurgias" className="text-whit d-flex flex-row gap-2 text-decoration-none text-white"><StethoscopeIcon /> Cirurgias</Link>
+                            <button onClick={handleLogout} className="text-whit d-flex flex-row gap-2 text-decoration-none text-white btn btn-link"><LogOutIcon /> Sair</button>
                         </nav>
                     </div>
 

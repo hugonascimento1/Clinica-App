@@ -28,56 +28,55 @@ export default function Login() {
   };
 
   return (
-    <div>
+    <div className=" container d-flex justify-content-center align-align-items-center vh-100">
 
       {loading ? (
         <Loading />
       ) : (
-        <div>
+        <div className="w-100" style={{ maxWidth: '400px' }}>
           <LogoClinic />
 
-          <div className="flex items-center justify-center">
-            <div className=" py-4 flex flex-col w-full mx-6 items-center justify-center">
-              <div className="flex flex-col">
-                <label htmlFor="email" className="text-2xl font-semibold mb-2">Email</label>
-                <input
-                  type="text"
-                  placeholder="Insira seu email"
-                  className="min-w-80 h-11 border-3 rounded-lg ring-2 ring-gray-600 border-gray-300 px-3"
-                  value={email}
-                  onChange={(e) => setEmail(e.target.value)}
-                />
-              </div>
-
-              <div className="flex flex-col mt-4">
-                <label htmlFor="password" className="text-2xl font-semibold mb-2">Senha</label>
-                <input
-                  type="password"
-                  placeholder="Insira sua senha"
-                  className="min-w-80 h-11 border-3 ring-2 ring-gray-600 rounded-lg border-gray-300 px-3"
-                  value={password}
-                  onChange={(e) => setPassword(e.target.value)}
-                />
-                {/* <a href="/forgotPassword" className="underline mt-2 text-center p-0 w-40">Esqueceu a senha?</a> */}
-              </div>
-
-              {errorMessage && (
-                <div className="text-red-500 mt-4">
-                  {errorMessage}
-                </div>
-              )}
-
-              <div className="mt-8 flex flex-col items-center">
-                <button
-                  className="bg-foreground h-11 min-w-80 border rounded-lg text-white text-xl"
-                  onClick={handleLogin}
-                >
-                  Entrar
-                </button>
-                <Link href="/createAccount" className="underline mt-4">Cadastre-se</Link>
-              </div>
+          <div className=" d-flex flex-column align-items-center mt-3">
+            <div className=" form-group w-100 mb-3">
+              <label htmlFor="email" className=" h5">Email</label>
+              <input
+                type="text"
+                placeholder="Insira seu email"
+                className="form-control"
+                value={email}
+                onChange={(e) => setEmail(e.target.value)}
+              />
             </div>
+
+            <div className="form-group w-100 mb-3">
+              <label htmlFor="password" className=" h5">Senha</label>
+              <input
+                type="password"
+                placeholder="Insira sua senha"
+                className="form-control"
+                value={password}
+                onChange={(e) => setPassword(e.target.value)}
+              />
+              {/* <a href="/forgotPassword" className=" text-decoration-underline mt-2 text-center">Esqueceu a senha?</a> */}
+            </div>
+
+            {errorMessage && (
+              <div className=" text-danger mb-3">
+                {errorMessage}
+              </div>
+            )}
+
+            
+              <button
+                className="btn btn-primary w-100 mb-3 "
+                style={{ backgroundColor: '#4844B6' }}
+                onClick={handleLogin}
+              >
+                Entrar
+              </button>
+              <Link href="/createAccount" className=" text-decoration-underline">Cadastre-se</Link>
           </div>
+
         </div>
       )}
 
