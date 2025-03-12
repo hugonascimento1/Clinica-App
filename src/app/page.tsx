@@ -2,11 +2,13 @@
 
 import LogoClinic from "@/components/LogoClinic";
 import Link from "next/link";
+import Logo from "../../public/Logo Clinica.svg"
 
 import { useState } from "react";
 import { supabase } from "@/lib/supabaseClient";
 import { useRouter } from "next/navigation";
 import Loading from "@/components/Loading";
+import Image from "next/image";
 
 export default function Login() {
   const [email, setEmail] = useState("");
@@ -36,24 +38,26 @@ export default function Login() {
         <div className="w-100" style={{ maxWidth: '400px' }}>
           <LogoClinic />
 
-          <div className=" d-flex flex-column align-items-center mt-3">
-            <div className=" form-group w-100 mb-3">
-              <label htmlFor="email" className=" h5">Email</label>
+          <div className=" d-flex flex-column align-items-center mt-5">
+            <div className=" form-group w-100 mb-3 mt-5">
+              <label htmlFor="email" className=" h5 fw-semibold">Email</label>
               <input
                 type="text"
                 placeholder="Insira seu email"
-                className="form-control"
+                className="form-control border-3 border-secondary rounded-3"
+                style={{ height: '50px' }}
                 value={email}
                 onChange={(e) => setEmail(e.target.value)}
               />
             </div>
 
             <div className="form-group w-100 mb-3">
-              <label htmlFor="password" className=" h5">Senha</label>
+              <label htmlFor="password" className=" h5 fw-semibold">Senha</label>
               <input
                 type="password"
                 placeholder="Insira sua senha"
-                className="form-control"
+                className="form-control border-3 border-secondary rounded-3"
+                style={{ height: '50px' }}
                 value={password}
                 onChange={(e) => setPassword(e.target.value)}
               />
@@ -68,8 +72,8 @@ export default function Login() {
 
             
               <button
-                className="btn btn-primary w-100 mb-3 "
-                style={{ backgroundColor: '#4844B6' }}
+                className="btn btn-primary w-100 mb-3 mt-3 rounded-3"
+                style={{ backgroundColor: '#4844B6', height: '50px' }}
                 onClick={handleLogin}
               >
                 Entrar

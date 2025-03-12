@@ -20,7 +20,7 @@ export default function Nav() {
     }
 
     return (
-        <div className="w-100 h-32 text-white py-5 d-flex align-items-center px-3"  style={{ backgroundColor: '#4844B6' }}>
+        <div className="w-100 h-32 text-white py-5 d-flex align-items-center px-3"  style={{ backgroundColor: '#4844B6', height: '128px' }}>
             <div className="d-flex w-100 align-items-center justify-content-between">
                 <button onClick={() => setIsOpen(true)} className="btn btn-link text-white p-0">
                     <MenuIcon />
@@ -28,8 +28,8 @@ export default function Nav() {
 
                 <div className="flex-grow-1 text-center fs-2 fw-bold">
                     <div className="fw-semibold fs-3 d-flex flex-column justify-content-center align-items-center">
-                        <h1>Logo</h1>
-                        <h1>Clinica</h1>
+                        <h3>Logo</h3>
+                        <h3>Clinica</h3>
                     </div>
                 </div>
 
