@@ -24,7 +24,7 @@ function Conteudo1() {
         <div>
             <Nav />
             <p>conteudo 1</p>
-            <h1>Bem vindo, {userName}!</h1>
+            <p>Bem vindo, {userName}!</p>
         </div>
     )
 }

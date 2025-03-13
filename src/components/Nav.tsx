@@ -40,7 +40,7 @@ export default function Nav() {
                 <>
                     <div className="position-fixed top-0 bottom-0 start-0 end-0 bg-black bg-opacity-50 z-40" onClick={() => setIsOpen(false)}></div>
 
-                    <div className=" position-fixed top-0 start-0 h-100 w-25 bg-foreground shadow-lg z-50 p-4 d-flex flex-column"  style={{ backgroundColor: '#4844B6' }}>
+                    <div className=" position-fixed top-0 start-0 h-100 w-60 bg-foreground shadow-lg z-50 p-4 d-flex flex-column"  style={{ backgroundColor: '#4844B6' }}>
                         <button onClick={() => setIsOpen(false)} className=" align-self-end mb-4 btn btn-link p-0 text-white">
                             <X className="w-6 h-6" />
                         </button>

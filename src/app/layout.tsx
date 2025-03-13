@@ -16,7 +16,9 @@ const geistMono = Geist_Mono({
 
 export const metadata: Metadata = {
   title: "Clinica app",
-  description: "",
+  description: "clinica app",
+  icons: "/logo.svg"
+  
 };
 
 export default function RootLayout({
