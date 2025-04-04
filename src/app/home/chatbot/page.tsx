@@ -1,9 +1,9 @@
 'use client'
 
-import Nav from "@/components/Nav";
 import withAuth from "@/components/withAuth"
 import { useEffect, useState } from "react";
 import { supabase } from "@/lib/supabaseClient";
+import NavPages from "@/components/NavPages";
 
 function Conteudo1() {
     const [userName, setUserName] = useState('');
@@ -20,11 +20,11 @@ function Conteudo1() {
         fetchUser();
     }, []);
 
-    return(
+    return (
         <div>
-            <Nav />
-            <p>conteudo 1</p>
-            <h1>Bem vindo, {userName}!</h1>
+            <NavPages nomePage="Acompanhamento" />
+            <h1>Aqui vai ficar o chatbot</h1>
+
         </div>
     )
 }
